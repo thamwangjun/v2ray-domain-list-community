@@ -4,7 +4,8 @@
 /domain-list-community.exe
 
 # Generated dat file.
-dlc.dat
+# lets commit this.
+#dlc.dat
 
 # Exported plaintext lists.
 /*.txt
