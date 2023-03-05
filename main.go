@@ -136,7 +136,7 @@ func parseDomain(domain string, entry *Entry) error {
 func parseAttribute(attr string) (*router.Domain_Attribute, error) {
 	var attribute router.Domain_Attribute
 	if len(attr) == 0 || attr[0] != '@' {
-		return &attribute, errors.New("invalid attribute: " + attr)
+		return &attribute, nil //errors.New("invalid attribute: " + attr)
 	}
 
 	// Trim attribute prefix `@` character
@@ -149,7 +149,7 @@ func parseAttribute(attr string) (*router.Domain_Attribute, error) {
 		attribute.Key = strings.ToLower(parts[0])
 		intv, err := strconv.Atoi(parts[1])
 		if err != nil {
-			return &attribute, errors.New("invalid attribute: " + attr + ": " + err.Error())
+			return &attribute, nil //errors.New("invalid attribute: " + attr + ": " + err.Error())
 		}
 		attribute.TypedValue = &router.Domain_Attribute_IntValue{IntValue: int64(intv)}
 	}
