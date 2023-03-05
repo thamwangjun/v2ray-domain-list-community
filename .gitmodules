@@ -1,0 +1,3 @@
+[submodule "hosts"]
+	path = hosts
+	url = https://github.com/thamwangjun/steven-black-hosts.git
